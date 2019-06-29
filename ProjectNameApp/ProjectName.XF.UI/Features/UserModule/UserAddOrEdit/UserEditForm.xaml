@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<features:Component x:TypeArguments="userAddOrEdit:UserAddOrEditPresenter"
+                    xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:features="clr-namespace:ProjectName.XF.UI.Features;assembly=ProjectName.XF.UI"
+                    xmlns:userAddOrEdit="clr-namespace:ProjectName.Presentation.Features.UserModule.UserAddOrEdit;assembly=ProjectName.Presentation"
+                    x:Class="ProjectName.XF.UI.Features.UserModule.UserAddOrEdit.UserEditForm">
+    <ContentView.Content>
+        <Grid>
+            <ActivityIndicator
+                x:Name="ActivityIndicator"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <StackLayout 
+                x:Name="Form"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    Text="Usuario:"
+                    TextColor="Blue"
+                    FontSize="18"
+                    Margin="20" />
+                <Entry 
+                    x:Name="FirstNameEntry"
+                    Margin="20,0"
+                    Placeholder="Nombre" />
+                <Entry 
+                    x:Name="LastNameEntry"
+                    Margin="20,0"
+                    Placeholder="Apellido" />
+                <Button
+                    Text="Guardar"
+                    Margin="20"
+                    BackgroundColor="Red"
+                    WidthRequest="200"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="SaveClicked" />
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</features:Component>

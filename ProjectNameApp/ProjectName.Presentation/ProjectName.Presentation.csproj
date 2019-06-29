@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Redux.NET" Version="2.0.0" />
+    <PackageReference Include="Mapster" Version="4.1.0" />
+    <PackageReference Include="Autofac" Version="4.9.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\UserModule\" />
+    <Folder Include="Features\UserModule\Store\" />
+    <Folder Include="Store\" />
+    <Folder Include="Features\UserModule\UserList\" />
+    <Folder Include="IoC\" />
+    <Folder Include="IoC\Modules\" />
+    <Folder Include="Features\UserModule\UserAddOrEdit\" />
+    <Folder Include="Features\Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Enterprise.Domain\Enterprise.Domain.csproj" />
+    <ProjectReference Include="..\ProjectName.Data\ProjectName.Data.csproj" />
+    <ProjectReference Include="..\ProjectName.Domain\ProjectName.Domain.csproj" />
+  </ItemGroup>
+</Project>

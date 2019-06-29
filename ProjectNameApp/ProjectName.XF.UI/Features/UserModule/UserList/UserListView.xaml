@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<features:Component
+    x:TypeArguments="userList:UserListPresenter"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:features="clr-namespace:ProjectName.XF.UI.Features;assembly=ProjectName.XF.UI"
+    xmlns:userList="clr-namespace:ProjectName.Presentation.Features.UserModule.UserList;assembly=ProjectName.Presentation"
+    x:Class="ProjectName.XF.UI.Features.UserModule.UserList.UserListView">
+    <ContentView.Content>
+        <Grid>
+            <ActivityIndicator x:Name="ActivityIndicator" VerticalOptions="Center" HorizontalOptions="Center" />
+            <ListView
+                x:Name="UserList"
+                ItemTapped="UserTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FullName}" TextColor="Black">
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentView.Content>
+</features:Component>

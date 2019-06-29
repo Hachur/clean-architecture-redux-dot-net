@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:userList="clr-namespace:ProjectName.XF.UI.Features.UserModule.UserList;assembly=ProjectName.XF.UI"
+    xmlns:userAddOrEdit="clr-namespace:ProjectName.XF.UI.Features.UserModule.UserAddOrEdit;assembly=ProjectName.XF.UI"
+    x:Class="ProjectName.XF.UI.MainPage">
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <userList:UserListView
+            x:Name="UserListView"
+            Grid.Row="0" />
+        <userAddOrEdit:UserEditForm
+            x:Name="UserForm"
+            Grid.Row="1" />
+    </Grid>
+</ContentPage>
